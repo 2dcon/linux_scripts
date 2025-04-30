@@ -94,7 +94,7 @@ case $OPTION in
 			rm brook
 		fi
 
-		wget $dlink
+		wget $dlink --no-check-certificate
 		
 		mv brook_linux_amd64 brook
 		chmod +x brook
