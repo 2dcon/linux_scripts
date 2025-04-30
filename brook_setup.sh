@@ -36,7 +36,7 @@ if test -f "$path/brook"; then
 		if [[ $YN == y ]]; then
 			systemctl stop brook
 			cd /temp/
-			wget $dlink --no-check-certificate
+			wget $dlink
 			cp -rf $fname /bin/brook/brook
 			chmod +x /bin/brook/brook
 			rm -f brook_linux_amd64
@@ -94,7 +94,7 @@ case $OPTION in
 			rm brook
 		fi
 
-		wget $dlink --no-check-certificate
+		wget $dlink
 		
 		mv brook_linux_amd64 brook
 		chmod +x brook
